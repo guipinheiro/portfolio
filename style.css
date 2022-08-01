@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@100;300;400;700;900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  font-size: 15px;
+}
+
+/*BASIC FORMATTING*/
+:root {
+  /*Colors*/
+  --primary-clr: #082032;
+  --secondary-clr: #2c394b;
+  --tertiary-clr: #334756;
+  --nav-clr: rgba(51, 71, 86, 0.6);
+  --interative-clr: #5db881;
+  --about-clr: #108c88;
+  --font-clr: #ffffff;
+  --font-nav-clr: #ffffff;
+  /*Fonts*/
+  --title-regular-font: 400 2.25rem "Roboto", Helvetica, sans-serif;
+  --title-regular-bold: 700 2.25rem "Roboto", Helvetica, sans-serif;
+  --title-regular-thin: 300 2.25rem "Roboto", Helvetica, sans-serif;
+  --subtitle-regular-font: 400 1.625rem "Roboto", Helvetica, sans-serif;
+  --subtitle-regular-bold: 700 1.625rem "Roboto", Helvetica, sans-serif;
+  --subtitle-regular-thin: 300 1.625rem "Roboto", Helvetica, sans-serif;
+  --nav-condensed-font: 700 1.3rem "Roboto Condensed", Helvetica, sans-serif;
+  /*WIDTH*/
+  --body-width: 1350px;
+}
+
+body,
+a,
+a:visited,
+h1,
+h2,
+h3,
+div,
+p,
+ul,
+ol,
+li,
+a,
+img {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--font-clr);
+  background-color: var(--primary-clr);
+  max-width: var(--body-width);
+  margin: auto;
+}
+/*ENDS BASIC FORMATTING*/
+
+/*NAVBAR LAYOUT*/
+
+#navbar {
+  position: fixed;
+  background-color: var(--nav-clr);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  width: 100vw;
+  max-width: var(--body-width);
+  height: 35px;
+}
+
+#nav-ul {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 15px;
+}
+
+#nav-ul > li {
+  font: var(--nav-condensed-font);
+  font-stretch: condensed;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-right: 5px;
+  color: var(--font-nav-clr);
+}
+
+/*ANIMATING BACKSLASH ON NAV LINKS*/
+.nav-hover {
+  opacity: 0;
+  color: var(--interative-clr);
+  padding-right: 2px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+li:hover .nav-hover {
+  opacity: 1;
+}
+/*NAVBAR LAYOUT END*/
+
+/*PRESENTATION AND PROJECTS LAYOUT */
+main {
+  display: grid;
+  grid-template-areas:
+    "welcome projects"
+    "grad-div grad-div"
+    "about about";
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: minmax(100vh, 1fr) 10px minmax(100vh, auto);
+}
+/*PRESENTATION AND PROJECTS LAYOUT END*/
+
+/*WELCOME-SECTION LAYOUT*/
+#welcome-section {
+  background-color: var(--primary-clr);
+  grid-area: welcome;
+  justify-self: center;
+  text-align: center;
+  padding-top: 60px;
+  /*border-right: 1px solid var(--tertiary-clr);*/
+}
+
+#welcome-img {
+  width: 200px;
+}
+
+h1 {
+  font: var(--title-regular-thin);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  margin-top: 15px;
+}
+
+h2 {
+  font: var(--subtitle-regular-bold);
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.dev-lang {
+  font: var(--subtitle-regular-bold);
+  font-size: 1.25rem;
+  margin-top: 15px;
+}
+
+#social-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-link-img {
+  width: 36px;
+  transition: transform 0.15s ease-in-out;
+}
+
+.social-link-img:hover,
+.social-link-img:focus,
+.social-link-img:active {
+  transform: scale(1.2);
+}
+/*WELCOME SECTION ENDS*/
+
+/*PROJECT SECTION STARTS*/
+#projects {
+  background-color: var(--primary-clr);
+  grid-area: projects;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding-right: 20px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  margin-left: 40px;
+  gap: 30px 40px;
+}
+
+.project-tile {
+  line-height: 0;
+  overflow: hidden;
+}
+
+/*ANIMATED UNDERLINE ON PROJECT TITLE*/
+.project-link .project-title::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  margin-top: 1px;
+  display: block;
+  background: var(--interative-clr);
+  transition: 300ms;
+}
+
+.project-link:hover .project-title::after {
+  width: 100%;
+}
+/*ENDS ANIMATED UNDERLINE ON PROJECT TITLE*/
+
+/*PROJECT IMG STYLING AND ANIMATION*/
+.project-img {
+  object-fit: cover;
+  width: 300px;
+  height: 177px;
+  border: none;
+  transition: transform 0.4s ease;
+  transform-origin: 50% 100%;
+}
+
+.project-img:hover {
+  transform: scale(1.2);
+  width: 100%;
+}
+
+/*PROJECTS DESCRIPTION LAYOUT*/
+.description-wrapper {
+  width: 300px;
+  height: 103px;
+  background-color: var(--secondary-clr);
+  text-align: center;
+}
+
+.project-title {
+  font: var(--subtitle-regular-thin);
+  font-size: 1.5rem;
+  padding: 9px 0px 6px 0px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.project-description {
+  font: var(--subtitle-regular-thin);
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 0 8px;
+}
+/*PROJECTS DESCRIPTION LAYOUT END*/
+
+/*GRADIENT TRANSITION*/
+
+#grad-div {
+  grid-area: grad-div;
+  background-image: linear-gradient(var(--primary-clr), var(--about-clr));
+}
+
+/*ABOUT SECTION*/
+#about {
+  grid-area: about;
+  background-color: var(--about-clr);
+  display: grid;
+  grid-template-areas: "about-wrapper about-img ";
+  grid-template-columns: 1fr 0.5fr;
+  justify-items: center;
+  align-items: center;
+}
+
+#about-img {
+  grid-area: about-img;
+  width: 300px;
+}
+
+#about-wrapper {
+  grid-area: about-wrapper;
+  text-align: justify;
+  margin: 40px 0px;
+}
+
+.about-description {
+  margin: auto;
+  font: var(--subtitle-regular-font);
+  font-weight: 300;
+  font-size: 1.1rem;
+  padding: 0px 2rem;
+}
+
+br {
+  margin-bottom: 10px;
+  display: block;
+  content: "";
+}
+
+.mail {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: var(--about-clr);
+  padding-bottom: 10px;
+  padding-right: 10px;
+  position: relative;
+  text-align: right;
+  width: 100%;
+  font: var(--subtitle-regular-font);
+  font-size: 0.75rem;
+  font-weight: 100;
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 768px) {
+  #nav-ul {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding-right: 15px;
+  }
+
+  main {
+    grid-template-areas:
+      "welcome"
+      "projects"
+      "grad-div"
+      "about";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 10px auto;
+  }
+
+  #projects {
+    justify-content: center;
+    padding: 40px 20px;
+    margin: 0px;
+  }
+
+  #projects {
+    gap: 30px 40px;
+  }
+
+  #about {
+    display: grid;
+    grid-template-areas:
+      "about-wrapper"
+      "about-img";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .about-description {
+    padding-top: 0.5rem;
+  }
+
+  #about-wrapper {
+    margin: 40px 0px 20px 0px;
+  }
+
+  footer {
+    text-align: center;
+    padding-top: 20px;
+  }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Web Form</title>
+	</head>
+	<body>
+        <main>
+          <div id="main-container">
+            <h1 id="title">Vegan Lifestyle</h1>
+            <p id="description">Hello fellow vegans, vegetarians and curious people about this lifestyle!<br>
+              In order to spread this way of life with more people, we need to get know you a little better! This way we can see who we need to reach and who is already with us.<br>
+              #SaveTheAnimals &#127807; &#128004; &#128022; &#128019; &#128029; &#128031;
+            </p>
+            <form id="survey-form">
+              
+              <!-- Basic info -->
+              <fieldset id="persona">
+                <legend class="form-title">Basic info:</legend>
+                <div class="persona-container">
+                    <div class="persona-item" id="persona-name">
+                        <label id="name-label" class="form-label" for="name">Name:<sup class="required">*</sup></label>
+                        <input type="text" id="name" required placeholder="First and last name" name="name">
+                    </div>
+      
+                    <div class="persona-item" id="persona-email">
+                        <label id="email-label" for="email" class="form-label">Email:<sup class="required">*</sup></label>
+                        <input type="email" id="email" required placeholder="Valid email" name="email">
+                    </div>
+      
+                    <div class="persona-item" id="persona-age">
+                      <label id="number-label" class="form-label" for="age">Age:<sup>*</sup></label>
+                        <input type="number" id="number" name="number" required placeholder="0 to 150" min="0" max="150">
+                    </div>
+                </div>
+              </fieldset>
+              
+              <!-- Gender -->
+              <fieldset>
+                <legend class="form-title">Gender:</legend>
+                <input type="radio" id="male" name="gender" value="Male" onClick="explicitGender()">
+                <label for="male" class="radio-check-description form-label">Male</label><br>
+      
+                <input type="radio" id="female" name="gender" value="Female" onClick="explicitGender()">
+                <label for="female" class="radio-check-description form-label">Female</label><br>
+      
+                <input type="radio" id="non-binary" name="gender" value="Non-Binary" onClick="explicitGender()">
+                <label for="non-binary" class="radio-check-description form-label">Non-Binary</label><br>
+                
+                <label onClick="selfGender()" class="radio-check-description form-label">
+                  <input type="radio" name="gender" id="self-gender" value="self" > None the above, I identify myself as:</input>
+                  <input type ="text" name="self" id="self-gender-text"/>
+                </label><br>
+                
+                <input type="radio" id="not-say" name="gender" value="not-say" onClick="explicitGender()">
+                <label for="not-say" class="radio-check-description form-label">Prefer not to say</label>
+              </fieldset>
+              <!-- Lifestyle -->
+              <fieldset>
+                <label id ="dropdown-label" class="form-title" for="lifestyle">What type of lifestyle are you currently in?</label><br>
+                <select id="dropdown" name="lifestyle">
+                  <option value="Vegan">Vegan</option>
+                  <option value="Strict-Vegetarian">Strict Vegetarian</option>
+                  <option value="Lacto-Vegetarians">Lacto-Vegetarians</option>
+                  <option value="Ovo-Vegetarians">Ovo-Vegetarians</option>
+                  <option value="Lacto-Ovo-Vegetarians">Lacto-Ovo Vegetarians</option>
+                  <option value="Omnivorous">Omnivorous</option>
+                  <option value="other">Other</option>
+                </select>
+              </fieldset>
+            
+            <!-- Top Cousines -->
+            <!-- FIX up to three cousines -->
+            <fieldset>
+              <legend class="form-title">What are your top cousines?</legend>
+              <div class="check-container">
+                <div class="check-item">
+                    <input type="checkbox" id="brazilian" name="top-cousine" value="brazilian" class="check-button">
+                    <label for="brazilian" class="check-cousine-description form-label">Brazilian</label>
+                </div>
+      
+                <div class="check-item">
+                    <input type="checkbox" id="italian" name="top-cousine" value="italian" class="check-button">
+                    <label for="italian" class="check-cousine-description form-label">Italian</label>
+                </div>
+      
+                <div class="check-item">
+                    <input type="checkbox" id="Japanese" name="top-cousine" value="Japanese" class="check-button">
+                    <label for="Japanese" class="check-cousine-description form-label">Japanese</label>
+                </div>
+      
+                <div class="check-item">
+                    <input type="checkbox" id="Korean" name="top-cousine" value="Korean" class="check-button">
+                    <label for="Korean" class="check-cousine-description form-label">Korean</label>
+                </div>
+      
+                <div class="check-item">
+                    <input type="checkbox" id="American" name="top-cousine" value="American" class="check-button">
+                    <label for="American" class="check-cousine-description form-label">American</label>
+                </div>
+      
+                <div class="check-item">
+                    <input type="checkbox" id="Chinese" name="top-cousine" value="Chinese" class="check-button">
+                    <label for="Chinese" class="check-cousine-description form-label">Chinese</label>
+                </div>
+      
+                <div class="check-item">
+                    <input type="checkbox" id="Spanish" name="top-cousine" value="Spanish" class="check-button">
+                    <label for="Spanish" class="check-cousine-description form-label">Spanish</label>
+                </div>
+      
+                <div class="check-item">
+                    <input type="checkbox" id="Mexican" name="top-cousine" value="Mexican" class="check-button">
+                    <label for="Mexican" class="check-cousine-description form-label">Mexican</label>
+                </div>
+      
+                <div class="check-item">
+                    <input type="checkbox" id="Arabic" name="top-cousine" value="Arabic" class="check-button">
+                    <label for="Arabic" class="check-cousine-description form-label">Arabic</label>
+                </div>
+      
+                <div class="check-item">
+                    <input type="checkbox" id="Indian" name="top-cousine" value="Indian" class="check-button">
+                    <label for="Indian" class="check-cousine-description form-label">Indian</label>
+                </div>
+                
+                <div class="check-item">
+                    <input type="checkbox" id="other" name="top-cousine" value="other" class="check-button">
+                    <label for="other" class="check-cousine-description form-label">Other</label>
+                </div>
+              </div>
+            </fieldset>
+            <!-- FIX up to three cousines -->
+            
+            <!-- Comments -->
+            <!-- FIX OVERFLOW -->
+            <fieldset>
+              <div id="text-area-container">
+                <label for="feedback" class="form-title">If you have any aditional feedback, please feel free to inform us!</label><br>
+                <textarea rols="5" id="feedback" name="feedback"></textarea>
+              </div>
+            </fieldset>
+            <!-- FIX OVERFLOW -->
+            
+            <input type="submit" id="submit">
+              
+            </form>
+          </div>
+        </main>
+        <script src="script.js"></script>    
+      </body>
+</html>
+

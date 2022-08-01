@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Landing Page</title>
+	</head>
+	<body>
+		<div id="body-container">
+			<header id="header">
+				<div id="nav-wrapper">
+					<img src="https://images2.imgbox.com/47/10/9CUcxdJQ_o.png" alt="hyperx logo" id="header-img" />
+
+					<input type="checkbox" class="nav-toggle" id="nav-toggle" />
+
+					<nav id="nav-bar">
+						<ul id="nav-link-container">
+							<li><a class="nav-link" href="#specs">Specs</a></li>
+							<li><a class="nav-link" href="#video">Trailer</a></li>
+							<li><a class="nav-link" href="#email">Partnership</a></li>
+						</ul>
+					</nav>
+
+					<div id="social-links">
+						<ul id="social-links-container">
+							<li>
+								<a href="https://twitter.com/hyperx" target="_blank"
+									><img
+										src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freeiconspng.com%2Fuploads%2Fcricle-twitter-emblem-png-clipart-8.png&f=1&nofb=1"
+										alt="hyperx twitter"
+										class="social-logo"
+								/></a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/user/kingstonhyperx" target="_blank"
+									><img
+										src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freepngimg.com%2Fthumb%2Fyoutube%2F77758-logo-live-computer-youtube-icons-png-download-free.png&f=1&nofb=1"
+										alt="hyperx youtube"
+										class="social-logo"
+								/></a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/HyperX/" target="_blank"
+									><img
+										src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fa%2Fa5%2FInstagram_icon.png&f=1&nofb=1"
+										alt="hyperx instagram"
+										class="social-logo"
+								/></a>
+							</li>
+						</ul>
+					</div>
+					<label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+				</div>
+			</header>
+
+			<main id="main-section">
+				<div id="hero-container">
+					<picture>
+						<source
+							media="(max-width: 44em)"
+							srcset="https://images2.imgbox.com/7d/fe/85Hd7Zoh_o.jpg"
+							alt="HyperX SoloCast"
+							title="HyperX SoloCast"
+							class="hero-img"
+						/>
+						<img src="https://images2.imgbox.com/7d/fe/85Hd7Zoh_o.jpg" alt="" class="hero-img" id="specs" />
+
+						<div id="call-container">
+							<h1 class="hero-call">New Solocast</h1>
+
+							<h2 class="hero-call">Level up your game with <a class="hyperx">HyperX</a></h2>
+
+							<button
+								type="button"
+								id="learn-more"
+								onclick="window.open('https://www.hyperxgaming.com/us/microphone/solocast-usb-microphone')"
+								value="New Tab"
+							>
+								Learn More
+							</button>
+						</div>
+					</picture>
+				</div>
+
+				<iframe
+					src="https://www.youtube.com/embed/uQk4JrJ5Z2g"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+					id="video"
+				></iframe>
+				<div id="partner-div">Partnership</div>
+
+				<div id="form-container">
+					<form action="#" method="post" id="form">
+						<label for="email" id="email-label"
+							>Are you a <a class="hyperx">streamer</a>? Check our new partnership program!</label
+						>
+						<input type="email" id="email" name="email" placeholder="Email" required />
+						<input type="submit" id="submit" value="Participate" />
+					</form>
+					<img
+						id="streamer-img"
+						src="https://images2.imgbox.com/5b/ca/23RpWVit_o.jpg"
+						alt="streamer with an hyperx solocast microphone on focus. Monitor and keyboard with blue lead on the background"
+					/>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>
+

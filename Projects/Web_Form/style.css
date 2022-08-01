@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;800&display=swap');
+
+html {
+  font-size: 15px;
+}
+
+body {
+  background: #28696E;
+}
+
+/*Headings*/
+#title {
+  padding:0;
+  margin: auto;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 12px;
+  text-align: center;
+}
+
+#title:hover {
+  font-weight: 800;
+}
+
+#description {
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+sup {
+  color: red;
+  
+}
+
+/*Line break in the description */
+p br {
+  display: block;
+  content: "";
+  margin-top: 5px;
+}
+
+/*General styling*/
+#main-container {
+  background: #E6F4F1;
+  width: 75vw;
+  border-radius: 1%;
+  margin: auto;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Fira sans", sans-serif;
+  color: #2A272A;
+  min-width: 300px;
+  max-width: 1000px;
+}
+
+/*form*/
+form {
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+/*fieldset */
+fieldset {
+  border: none;
+  line-height: 1.4;
+  margin: 0;
+
+}
+
+legend {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/*Forms title and labels*/
+.form-title {
+  margin:0;
+  padding: 0;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+/* Forms labels */
+.form-label {
+/*   background: green; */
+  font-weight: 300;
+}
+
+/*Basic info section*/
+/* .persona-container {
+  width: 100%;
+  max-width: 700px;
+  text-align: justify;
+}
+
+.persona-item {
+  float: left;
+} */
+
+.persona-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input[type="number"] {
+  width: 70px;
+}
+
+/*Top cousines section*/
+.check-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 500px) {
+  .check-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/*Comments sections*/
+#text-area-container {
+  width:100%;
+}
+
+textarea {
+  max-width: 100%;
+  resize:both;
+}
+
+#submit {
+  margin-left: 12px;
+}

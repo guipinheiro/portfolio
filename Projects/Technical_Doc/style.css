@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+
+:root.dark {
+  /*Website main colors*/
+  --primary-clr: #f3f3f3;
+  --secondary-clr: #eaeaea;
+  --interative-clr: #009a8c;
+  --interative-hover-clr: #91d87e;
+  --error-clr: #d93030;
+  --disabled-clr: #d93030;
+  --background-clr: #130319;
+  /*details*/
+  --details-parent-clr: #343469;
+  --details-child-clr: #a53c2c;
+  /*Borders*/
+  --border-thin: 1px solid #f3f3f3;
+  --border-large: 2px solid #f3f3f3;
+  /*Code*/
+  --code-background-clr: #361629;
+  /*Fonts */
+  --title-regular-font: 400 2.5rem "Roboto", sans-serif;
+  --title-bold-font: 700 2.5rem "Roboto", sans-serif;
+  --subtitle-regular-font: 400 2rem "Roboto", sans-serif;
+  --subtitle-bold-font: 700 2rem "Roboto", sans-serif;
+  --subsubtitle-regular-font: 400 1.5rem "Roboto", sans-serif;
+  --subsubtitle-bold-font: 700 1.5rem "Roboto", sans-serif;
+  --desc-x-thin-font: 100 1rem "Roboto", sans-serif;
+  --desc-thin-font: 300 1rem "Roboto", sans-serif;
+  --desc-regular-font: 400 1rem "Roboto", sans-serif;
+  --desc-bold-font: 700 1rem "Roboto", sans-serif;
+  /*Spacing*/
+  --bottom-reg-space: 10px;
+  --bottom-big-space: 20px;
+}
+
+:root,
+:root.light {
+  /*Website main colors*/
+  --primary-clr: #1a1a1a;
+  --secondary-clr: #343434;
+  --interative-clr: #005066;
+  --interative-hover-clr: #009a8c;
+  --error-clr: #d93030;
+  --disabled-clr: #d93030;
+  --background-clr: #ffffff;
+  /*details*/
+  --details-parent-clr: #b5b6fb;
+  --details-child-clr: #ffc99e;
+  /*Borders*/
+  --border-thin: 1px solid #4f4f4f;
+  --border-large: 2px solid #4f4f4f;
+  /*Code*/
+  --code-background-clr: #e6e6e6;
+  /*Fonts */
+  --title-regular-font: 400 2.5rem "Roboto", sans-serif;
+  --title-bold-font: 700 2.5rem "Roboto", sans-serif;
+  --subtitle-regular-font: 400 2rem "Roboto", sans-serif;
+  --subtitle-bold-font: 700 2rem "Roboto", sans-serif;
+  --subsubtitle-regular-font: 400 1.5rem "Roboto", sans-serif;
+  --subsubtitle-bold-font: 700 1.5rem "Roboto", sans-serif;
+  --desc-x-thin-font: 100 1rem "Roboto", sans-serif;
+  --desc-thin-font: 300 1rem "Roboto", sans-serif;
+  --desc-regular-font: 400 1rem "Roboto", sans-serif;
+  --desc-bold-font: 700 1rem "Roboto", sans-serif;
+  /*Spacing*/
+  --bottom-reg-space: 10px;
+  --bottom-big-space: 20px;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  font-size: 15px;
+}
+
+blockquote,
+body,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+ol,
+p,
+ul {
+  margin: 0;
+  line-height: 1;
+}
+
+ol,
+ul {
+  padding-left: 22px;
+  line-height: 1.5;
+}
+
+.ul-details {
+  padding-bottom: var(--bottom-reg-space);
+}
+
+li:not(:last-child) {
+  padding-bottom: var(--bottom-reg-space);
+}
+
+.example {
+  min-width: 300px;
+  max-width: 450px;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+b {
+  font: var(--desc-bold-font);
+}
+
+body {
+  font: var(--desc-thin-font);
+  color: var(--primary-clr);
+  background-color: var(--background-clr);
+}
+
+/*Basic grid container separating nav from main section - no header*/
+#main-container {
+  display: grid;
+  grid-template-columns: 260px auto;
+  grid-template-rows: 1fr;
+  grid-template-areas: "nav main";
+  height: 100vh;
+  align-content: start;
+  overflow: auto;
+}
+
+#nav-wrapper {
+  border-right: var(--border-large);
+  overflow: scroll;
+  grid-area: nav;
+  position: fixed;
+  height: 100vh;
+  background-color: var(--background-clr);
+  z-index: 1;
+}
+
+#navbar {
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#nav-title {
+  text-align: center;
+  text-transform: uppercase;
+  font: var(--title-bold-font);
+}
+
+.nav {
+  padding: 10px;
+  border-bottom: var(--border-thin);
+}
+
+a {
+  text-decoration: none;
+  font: var(--desc-regular-font);
+  color: var(--interative-clr);
+}
+
+a:hover {
+  color: var(--interative-hover-clr);
+}
+
+#main-doc {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  text-align: justify;
+}
+
+.main-section {
+  margin-bottom: var(--bottom-big-space);
+  position: relative;
+}
+
+.main-section:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 5%;
+  width: 90%;
+  border-bottom: var(--border-thin);
+}
+
+.section-title {
+  font: var(--subtitle-bold-font);
+  margin-bottom: var(--bottom-reg-space);
+}
+
+.section-sub-title {
+  font: var(--subsubtitle-bold-font);
+  margin-bottom: var(--bottom-reg-space);
+}
+
+details:not(.last) {
+  margin-bottom: var(--bottom-reg-space);
+}
+
+.parent-border {
+  border: 1px solid var(--details-parent-clr);
+  border-radius: 5px;
+}
+
+.child-border {
+  border: 1px solid var(--details-child-clr);
+  border-radius: 5px;
+}
+
+.parent-back {
+  background-color: var(--details-parent-clr);
+}
+
+.child-back {
+  background-color: var(--details-child-clr);
+}
+
+summary {
+  padding: 5px;
+  border-radius: 4px 4px 0px 0px;
+  font-weight: 300;
+}
+
+summary:hover {
+  cursor: pointer;
+}
+
+.details-description {
+  padding: 5px;
+}
+
+.section-description {
+  line-height: 1.5;
+  padding-bottom: var(--bottom-reg-space);
+}
+
+code {
+  background-color: var(--code-background-clr);
+  display: block;
+  margin: 0 10px 10px 10px;
+  padding: 5px 15px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/*Media query for small screen sizes*/
+/*Fix min row for navbar */
+@media screen and (max-width: 480px) {
+  #main-container {
+    grid-template-rows: 150px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "main";
+  }
+
+  #nav-wrapper {
+    position: fixed; /*so it won't disappear as the user scrolls*/
+    border-right: none;
+    min-height: 0;
+    border-bottom: var(--border-large);
+    max-height: 150px;
+    width: 100%;
+  }
+
+  .nav {
+    padding: 10px 20px;
+    border-bottom: var(--border-thin);
+  }
+
+  .nav:last-child {
+    border: none;
+  }
+
+  #main-doc {
+    padding: 10px 20px 100px 20px;
+  }
+}
+
+body {
+  background-color: var(--background-clr);
+}
+
+.color-mode-container {
+  display: flex;
+  column-gap: 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.color-mode-icon {
+  height: 24px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 24px;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input:checked + .slider {
+  background-color: #4e253d;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 5px #4e253d;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(21px);
+  -ms-transform: translateX(21px);
+  transform: translateX(21px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
