@@ -39,6 +39,7 @@ html {
   text-rendering: optimizeLegibility;
   image-rendering: auto;
   scroll-behavior: smooth;
+  font-size: 15px;
 }
 
 blockquote,
@@ -486,5 +487,17 @@ label > a.hyperx {
     max-width: 100vw;
     max-height: 100%;
     filter: blur(10px) opacity(50%);
+  }
+
+  #call-container {
+    position: absolute;
+    left: 50px;
+    top: 20%;
+    width: 15rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.5rem;
   }
 }
