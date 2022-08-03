@@ -270,10 +270,13 @@ h2 {
   grid-area: about-wrapper;
   text-align: justify;
   margin: 40px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.about-description {
-  margin: auto;
+.about-p {
+
   font: var(--subtitle-regular-font);
   font-weight: 300;
   font-size: 1.1rem;
