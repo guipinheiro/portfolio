@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oxanium", sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    min-height: 100vh;
+}
+
+main {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0px 15px;
+    position: relative;
+}
+
+.pokedex {
+    width: 100%;
+    max-width: 350px;
+}
+
+.pokemon {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-70%) translateY(-10%);
+    height: 15%; 
+}
+
+.pokemon-data {
+    position: absolute;
+    font-weight: 600;
+    font-size: clamp(8px, 6.5vw, 25px);
+    top: 54.5%;
+    left: 35%;
+    color: rgb(150, 150, 150);
+    text-align: right;
+}
+
+.pokemon-name {
+    color:rgb(35, 35, 35);
+    text-transform: capitalize;
+}
+
+.form {
+    position: absolute;
+    top: 65%;
+    left: 12%;
+    width: 67%;
+}
+
+#input-search {
+    width: 100%;
+    padding: 2% 1%;
+    font-size: clamp(8px, 6.5vw, 1rem);
+    outline: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #3a444d;
+    box-shadow: -2px 3px 0 #888, -4px 5px 0 #333;
+}
+
+.buttons {
+    position: absolute;
+    top: 85%;
+    left: 12%;
+    width: 67%;
+    display: flex;
+    gap: 15px;
+}
+
+.button {
+    width: 50%;
+    padding: 2%;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: clamp(8px, 6.5vw, 1rem);
+    font-weight: 400;
+    color: white;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222;
+}
+
+.button:active, .search:active{
+    box-shadow: inset -3px 4px 0 #222;
+    font-size: 0.8rem;
+}
+
+.button:focus, .button:hover {
+    outline: none;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.search {
+    width: 23%;
+    height: 150%;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00bdd5;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    border: 2px solid #004F65;
+    box-shadow: -2px 3px 0 #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search:focus, .search:hover {
+    outline: none;
+    background-color: #0093a6;
+    cursor: pointer;
+}
+.search-img:active {
+    width: 65%;
+}
+
+.search-img {
+    width: 80%;
+    padding: 0;
+
+}
+
+/* #search {
+    position: absolute;
+}
+
+#left {
+    position: absolute;
+}
+
+#right {
+    position: absolute;
+} */
